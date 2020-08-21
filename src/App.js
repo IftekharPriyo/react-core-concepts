@@ -3,37 +3,37 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  var person ={
-    name: 'John',
-    lastName: 'Doe'
-  } ;
-  var style = {
-    color: 'red',
-    backgroundColor: 'yellow',
-    padding: 20
-  };
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit done <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h1>{2+3}</h1>
-        <h2 style={style}>{person.name} {person.lastName}</h2>
-        <p style={{backgroundColor: 'cyan'}}>My first react paragraph</p>
+        
+        <Person></Person>
+        <Person></Person>
+        <Person></Person>
         
       </header>
     </div>
   );
+}
+
+function Person(){
+  const personStyle = {
+    border: '2px solid red',
+    margin : '10px',
+    padding : '30px',
+    borderRadius : '10px'
+  }
+  return (
+    // <div style={{border:"2px solid red", margin: '10px'}}>
+    //   <h1>Name : John Doe</h1>
+    //   <h3>Software Developer</h3>
+    // </div>   
+    <div style={personStyle}>
+      <h1>Name : John Doe</h1>
+      <h3>Software Developer</h3>
+    </div> 
+  )
 }
 
 export default App;
