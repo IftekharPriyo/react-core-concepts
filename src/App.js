@@ -6,21 +6,26 @@ function App() {
   const products = [
     {name: 'Photoshop', price: '$90.99'},
     {name: 'Illustrator', price: '$60.99'},
-    {name: 'PDF', price: '$10.99'}
-
+    {name: 'PDF', price: '$10.99'},
+    {name: 'XD', price: '$70.99'}
   ]
+  // const productNames = products.map(product=>product.name);
+  const people = [
+    'John', 'Jerry', 'Robert', 'Hugh'
+  ];
+  const peopleName = people.map(people => people);
+  console.log(peopleName);
   return (
     <div className="App">
       <header className="App-header">
-        <div>
-          <Product name={products[0].name} price={products[0].price}></Product>
-          <Product name={products[1].name} price={products[1].price}></Product>
-          <Product name={products[2].name} price={products[2].price}></Product>
-        </div>
-        {/* <Person name='John' job='Software Developer'></Person>
-        <Person name='Gustavo' job='Businessman'></Person>
-        <Person name='Harry' job='Data Scientist'></Person> */}
-        
+        <ul>
+          {/* {
+            people.map(people=><li>{people}</li>)
+          } */}
+          {
+            products.map(products=><Product name={products.name} price={products.price}></Product>)
+          }
+        </ul> 
       </header>
     </div>
   );
@@ -33,7 +38,7 @@ function Product(props){
     borderRadius : '5px',
     backgroundColor : 'lightgray',
     height : '300px',
-    width : '250px',
+    width : '300px',
     float : 'left',
     marginLeft : '10px'
   }
